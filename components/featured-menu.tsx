@@ -3,6 +3,7 @@ import Link from "next/link"
 import { motion } from "framer-motion"
 import { ShoppingCart, Sparkles } from "lucide-react"
 import { GsapScrollAnimation } from "@/components/gsap-scroll-animation"
+import { getImagePath } from "@/lib/utils"
 
 const menuItems = [
   {
@@ -10,28 +11,28 @@ const menuItems = [
     name: "Pan-Seared Scallops",
     description: "Succulent scallops with seasonal vegetables and champagne beurre blanc",
     price: "$38",
-    image: "/pan-seared-scallops-seafood-dish.jpg",
+    image: getImagePath("/pan-seared-scallops-seafood-dish.jpg"),
   },
   {
     id: 2,
     name: "Wagyu Ribeye",
     description: "Premium Japanese Wagyu with truffle mashed potatoes and red wine reduction",
     price: "$52",
-    image: "/wagyu-ribeye-steak-premium-beef.jpg",
+    image: getImagePath("/wagyu-ribeye-steak-premium-beef.jpg"),
   },
   {
     id: 3,
     name: "Lobster Thermidor",
     description: "Classic French lobster with creamy sauce, caviar, and asparagus",
     price: "$45",
-    image: "/lobster-thermidor-elegant-seafood.jpg",
+    image: getImagePath("/lobster-thermidor-elegant-seafood.jpg"),
   },
   {
     id: 4,
     name: "Duck Confit",
     description: "Slow-cooked duck leg with cherry gastrique and wild mushrooms",
     price: "$42",
-    image: "/duck-confit-french-cuisine.jpg",
+    image: getImagePath("/duck-confit-french-cuisine.jpg"),
   },
 ]
 
@@ -126,7 +127,7 @@ export function FeaturedMenu() {
                   {/* Image Container */}
                   <div className="relative h-56 overflow-hidden">
                     <motion.img
-                      src={item.image || "/placeholder.svg"}
+                      src={item.image || getImagePath("/placeholder.svg")}
                       alt={item.name}
                       className="w-full h-full object-cover"
                       whileHover={{ scale: 1.15 }}

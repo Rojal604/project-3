@@ -2,6 +2,7 @@
 import { motion } from "framer-motion"
 import { Star, Quote } from "lucide-react"
 import { GsapScrollAnimation } from "@/components/gsap-scroll-animation"
+import { getImagePath } from "@/lib/utils"
 
 const testimonials = [
   {
@@ -10,7 +11,7 @@ const testimonials = [
     role: "Food Critic",
     content: "An exceptional dining experience from start to finish. The attention to detail is remarkable.",
     rating: 5,
-    image: "/avatars/elizabeth.png",
+    image: getImagePath("/avatars/elizabeth.png"),
   },
   {
     id: 2,
@@ -18,7 +19,7 @@ const testimonials = [
     role: "Regular Guest",
     content: "Every visit to Luxe is a celebration. The ambiance, service, and food are simply perfection.",
     rating: 5,
-    image: "/avatars/james.png",
+    image: getImagePath("/avatars/james.png"),
   },
   {
     id: 3,
@@ -26,7 +27,7 @@ const testimonials = [
     role: "Food Blogger",
     content: "The flavor combinations are innovative yet respectful of tradition. A culinary masterpiece.",
     rating: 5,
-    image: "/avatars/marie.png",
+    image: getImagePath("/avatars/marie.png"),
   },
   {
     id: 4,
@@ -34,7 +35,7 @@ const testimonials = [
     role: "Wine Enthusiast",
     content: "The wine pairings are expertly curated. This restaurant truly understands the art of fine dining.",
     rating: 5,
-    image: "/avatars/david.png",
+    image: getImagePath("/avatars/david.png"),
   },
 ]
 
@@ -191,7 +192,7 @@ export function Testimonials() {
                   >
                     <div className="relative">
                       <img
-                        src={testimonial.image || "/placeholder.svg"}
+                        src={testimonial.image || getImagePath("/placeholder.svg")}
                         alt={testimonial.name}
                         className="w-16 h-16 rounded-full object-cover border-2 border-primary/30 group-hover:border-primary/60 transition-all duration-300"
                       />

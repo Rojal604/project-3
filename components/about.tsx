@@ -3,6 +3,7 @@ import { motion } from "framer-motion"
 import { GsapScrollAnimation } from "@/components/gsap-scroll-animation"
 import { Quote, Sparkles } from "lucide-react"
 import { useMemo } from "react"
+import { getImagePath } from "@/lib/utils"
 
 // Stable particle component to avoid hydration errors
 function ParticleField({ count, opacity }: { count: number; opacity: number }) {
@@ -292,7 +293,7 @@ export function About() {
                 <div className="absolute inset-0 bg-gradient-to-br from-amber-500/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10" />
                 <div className="absolute inset-0 border-2 border-amber-500/0 group-hover:border-amber-500/40 rounded-2xl transition-all duration-500 z-10" />
                 <motion.img
-                  src="/restaurant-interior-elegant-dining.jpg"
+                  src={getImagePath("/restaurant-interior-elegant-dining.jpg")}
                   alt="Restaurant interior"
                   className="w-full h-full object-cover"
                   whileHover={{ scale: 1.1 }}
@@ -315,7 +316,7 @@ export function About() {
                 <div className="absolute inset-0 bg-gradient-to-bl from-amber-500/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10" />
                 <div className="absolute inset-0 border-2 border-amber-500/0 group-hover:border-amber-500/40 rounded-2xl transition-all duration-500 z-10" />
                 <motion.img
-                  src="/chef-cooking-kitchen-professional.jpg"
+                  src={getImagePath("/chef-cooking-kitchen-professional.jpg")}
                   alt="Chef at work"
                   className="w-full h-full object-cover"
                   whileHover={{ scale: 1.1 }}
@@ -338,7 +339,7 @@ export function About() {
                 <div className="absolute inset-0 bg-gradient-to-t from-amber-500/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10" />
                 <div className="absolute inset-0 border-2 border-amber-500/0 group-hover:border-amber-500/40 rounded-2xl transition-all duration-500 z-10" />
                 <motion.img
-                  src="/fine-dining-plated-dish-gourmet.jpg"
+                  src={getImagePath("/fine-dining-plated-dish-gourmet.jpg")}
                   alt="Fine dining dish"
                   className="w-full h-full object-cover"
                   whileHover={{ scale: 1.08 }}
